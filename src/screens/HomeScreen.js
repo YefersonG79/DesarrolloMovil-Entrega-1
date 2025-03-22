@@ -1,15 +1,16 @@
 import react from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { Image } from "expo-image";
-
+import { LinearGradient } from "expo-linear-gradient";
+import colors from "../constants/colors";
 
 const HomeScreen = () => {
     return (
         
-        <View style={styles.container}>
+        <LinearGradient colors={colors.gradienteAccion} style={styles.container}>
             <Image source={require('../../assets/squirtle_home.gif')} style={styles.Image} />
             <Text style={styles.text}>Pantalla principal</Text>
-        </View>
+        </LinearGradient>
     )
 }
 
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
         height: 110,
     },
     text: {
-        color: '#ffff',
+        color: colors.texto,
         fontSize: 20
     }
 })

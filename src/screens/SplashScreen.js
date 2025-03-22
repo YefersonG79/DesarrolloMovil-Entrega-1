@@ -1,7 +1,9 @@
 import react, {useEffect} from "react";
-import { View, Text,StyleSheet } from "react-native";
+import { Text,StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Image } from "expo-image";
+import { LinearGradient } from "expo-linear-gradient";
+import colors from "../constants/colors";
 
 
 const SplashScreen = () => {
@@ -16,10 +18,10 @@ const SplashScreen = () => {
 
     // Se muestra la pantalla Splash
     return (
-        <View style={styles.container}>
+        <LinearGradient colors={colors.gradientePrimario} style={styles.container}>
             <Image source={require('../../assets/Logo_Splash.gif')} style={styles.Image} />
             <Text style={styles.txt}>Loading...</Text>
-        </View>
+        </LinearGradient>
     )
 }
 
@@ -35,7 +37,7 @@ const styles = StyleSheet.create({
         height: 100,
     },
     txt: {
-        color: '#fff',
+        color: colors.texto,
         fontSize: 20
     }
 })
