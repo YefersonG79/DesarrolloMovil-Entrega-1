@@ -1,41 +1,26 @@
 import React from "react";
-import { View, Text, StyleSheet, ImageBackground } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 const NotificationScreen = () => {
     return (
-        <ImageBackground source={require('../../assets/pochita_notifications.jpg')} // Ruta de tu imagen
-        style={styles.background}
-        resizeMode="cover">
         <View style={styles.container}>
-            <Text style={styles.text}>Pantalla de notificaciones</Text>
+            <Text style={styles.text}>Notificaciones</Text>
         </View>
-        </ImageBackground>
     )
 }
 
 const styles = StyleSheet.create({
-    background: {
-        flex: 1, 
-        width: '100%', 
-        height: '100%',
-    },
-    overlay: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
     container: {
         flex: 1,
+        backgroundColor: '#FFCC00', // Amarillo intenso
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     text: {
         fontSize: 24,
         fontWeight: 'bold',
-        alignContent: 'center',
-        justifyContent: 'center',
+        color: '#000', // Texto en negro para buen contraste
     }
 });
-
 
 export default NotificationScreen;
