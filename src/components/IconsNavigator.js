@@ -5,7 +5,8 @@ import { Ionicons } from '@expo/vector-icons';
 const tabColors = {
     Home: '#1C71A6',  
     User: '#008000',       
-    Notifications: '#ff0000' 
+    Notifications: '#ff0000',
+
 };
 
 const getTabBarIcon = (routeName, color, size) => {
